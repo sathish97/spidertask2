@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">spidertask2</string>
+    <string-array name="deps">
+        <item>CSE</item>
+        <item>ECE</item>
+        <item>EEE</item>
+        <item>MECH</item>
+        <item>CIVIL</item>
+        <item>CHEM</item>
+        <item>ICE</item>
+        <item>PROD</item>
+        <item>META</item>
+        <item>OTHERS</item>
+    </string-array>
+</resources>
+
