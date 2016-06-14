@@ -54,7 +54,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="app dev"
-        android:id="@+id/checkBox1"
+        android:id="@+id/c1"
         android:onClick="c1"
         android:layout_below="@+id/spinner"
         android:layout_alignParentStart="true"
@@ -64,19 +64,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="web dev"
-        android:id="@+id/checkBox2"
+        android:id="@+id/c2"
         android:onClick="c2"
-        android:layout_below="@+id/checkBox1"
-        android:layout_alignStart="@+id/checkBox1" />
+        android:layout_below="@+id/c1"
+        android:layout_alignStart="@+id/c1" />
 
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="algos"
-        android:id="@+id/checkBox3"
+        android:id="@+id/c3"
         android:onClick="c3"
-        android:layout_below="@+id/checkBox2"
-        android:layout_alignStart="@+id/checkBox2" />
+        android:layout_below="@+id/c2"
+        android:layout_alignStart="@+id/c2" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -94,8 +94,9 @@
         android:layout_height="wrap_content"
         android:text="mentorship"
         android:id="@+id/switch1"
-        android:layout_alignBottom="@+id/checkBox2"
-        android:layout_alignParentEnd="true"
-        android:checked="false" />
+        android:checked="false"
+        android:layout_alignBaseline="@+id/c1"
+        android:layout_alignBottom="@+id/c1"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

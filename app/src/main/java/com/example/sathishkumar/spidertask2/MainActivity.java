@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -16,6 +17,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
     int i=0;
     Spinner spinner;
     String str1,str2;
+    CheckBox c1,c2,c3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -26,6 +28,43 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
         ArrayAdapter adapter=ArrayAdapter.createFromResource(this,R.array.deps,android.R.layout.simple_spinner_item);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
+        c1=(CheckBox) findViewById(R.id.c1);
+
+        c1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(((CheckBox)v).isChecked()){
+                    i++;
+                }
+                else{
+                    i--;
+                }
+            }
+
+        });
+        c2=(CheckBox) findViewById(R.id.c2);
+        c2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (((CheckBox) v).isChecked()) {
+                    i++;
+                } else {
+                    i--;
+                }
+            }
+        });
+        c3=(CheckBox) findViewById(R.id.c3);
+        c3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (((CheckBox) v).isChecked()) {
+                    i++;
+                } else {
+                    i--;
+                }
+            }
+        });
+
     }
 
 
@@ -39,15 +78,8 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
     public void onNothingSelected(AdapterView<?> parent) {
     }
 
-    public void c1(View view){
-     i++;
-    }
-    public void c2(View view){
-     i++;
-    }
-    public void c3(View view){
-     i++;
-    }
+
+
     public void submitButton(View view)
     {
         EditText text1= (EditText) findViewById(R.id.editText);
@@ -69,6 +101,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
 
 
         }
+
         if(i==0)
         {
           Toast toast=Toast.makeText(this,"no profiles opted", Toast.LENGTH_SHORT);
